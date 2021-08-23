@@ -7,14 +7,18 @@ int main()
 	int i = 1;
 	int j = 1;
 	int k = 2;
-	printf("%d\n%d\n", i, j);
+	int sum = 0;
 
 	while (k < 1000000)
 	{
 		i = i + j;
 		j = j + k;
 		k = i + j;
-		printf("%d\n%d\n", i, j);
+
+		sum += j;
+		if (k <1000000)
+			continue;
+		printf("%d\n", sum);
 
 	}
 
